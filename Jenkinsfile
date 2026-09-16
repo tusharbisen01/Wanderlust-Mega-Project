@@ -2,6 +2,10 @@
 pipeline {
     agent {label 'agent'}
     
+    options {
+        skipDefaultCheckout(true)
+    }
+    
     environment{
         SONAR_HOME = tool "Sonar"
     }
